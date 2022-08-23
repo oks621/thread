@@ -3,7 +3,7 @@ package main.java;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class ThreadModule implements Runnable {
+public class ThreadModule  {
     public static void main(String[] args) {
         synchronized (ThreadModule.class) {
             Thread threadModule1 = new Thread(() -> {
@@ -35,9 +35,5 @@ public class ThreadModule implements Runnable {
         }
     }
 
-    @Override
-    public void run() {
-
-    }
 }
 
