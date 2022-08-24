@@ -1,4 +1,4 @@
-package main.java;
+package main.java.example1;
 
 import java.sql.Timestamp;
 import java.util.Date;

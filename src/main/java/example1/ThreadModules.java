@@ -1,4 +1,6 @@
-package main.java;
+package main.java.example1;
+
+import main.java.example1.ThreadModule;
 
 public class ThreadModules {
     public static void main(String[] args) {
