@@ -1,10 +1,15 @@
 package main.java.example1;
 
+import main.java.example2.StringInTheard;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class GeneralClasss {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new Timer(1));
-        Thread thread2 = new Thread(new Waiter(5));
-        thread1.start();
-        thread2.start();
+
+        ExecutorService service = Executors.newFixedThreadPool(2);
+        service.execute(GeneralClass::new);
+        service.shutdown();
     }
 }

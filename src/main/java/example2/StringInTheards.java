@@ -5,29 +5,8 @@ import java.util.concurrent.Executors;
 
 public class StringInTheards {
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(4);
-        service.execute(() -> new MetodsForTheards().number());
-        service.execute(() -> {
-            try {
-                new MetodsForTheards().buzz();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-        service.execute(() -> {
-            try {
-                new MetodsForTheards().fizz();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-        service.execute(() -> {
-            try {
-                new MetodsForTheards().fizzbuzz();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-
+        ExecutorService service = Executors.newFixedThreadPool(2);
+      service.execute(StringInTheard::new);
+      service.shutdown();
     }
 }
